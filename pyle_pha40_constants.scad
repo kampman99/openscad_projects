@@ -1,6 +1,6 @@
-mount_wing_x = 20;
+mount_wing_x = 16;
 mount_wing_y = 48;
-screw_hole_r = 3;
+screw_hole_r = 2;
 
 front_rear_wall_x = 50;
 front_rear_wall_y = 3;
