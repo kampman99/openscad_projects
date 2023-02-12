@@ -6,7 +6,7 @@ $fs = .01;
 
 // main base
 color(green)
-    cube([main_base_x, main_base_y, base_z], true);
+    roundedcube([main_base_x, main_base_y, base_z], true, .5, "z");
 
 // left mounting wing
 translate([(-main_base_x/2 + -mount_wing_x/2),
