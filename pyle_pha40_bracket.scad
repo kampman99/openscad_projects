@@ -1,4 +1,5 @@
 include <pyle_pha40_constants.scad>;
+include <roundedcorners.scad>;
 
 // High resolution cylinders
 $fs = .01;
@@ -13,7 +14,7 @@ translate([(-main_base_x/2 + -mount_wing_x/2),
     0]) {
     color(red)
         difference() {
-        cube([mount_wing_x, mount_wing_y, base_z], true, .6, "zmax");
+        cube([mount_wing_x, mount_wing_y, base_z], true);
         translate([0, 0, -base_z/2-.1])
             cylinder(base_z + .2, r = screw_hole_r, true);
         }
@@ -25,7 +26,7 @@ translate([(main_base_x/2 + mount_wing_x/2),
     0]) {
     color(blue)
         difference() {
-        cube([mount_wing_x, mount_wing_y, base_z], true, .6, "x");
+        cube([mount_wing_x, mount_wing_y, base_z], true);
         translate([0, 0, -base_z/2-.1])
             cylinder(base_z + .2, r = screw_hole_r, true);
         }
