@@ -3,9 +3,10 @@ include <BOSL2/std.scad>;
 // Tray should be max length 260mm to fit in BCW cardboard storage box.
 // 3d printer bed is too small to fit full length so have to print two
 // smaller parts.
+// Width in BCW box is 109mm.
 
-cassette_w = 102;
-cassette_d = 13;
+cassette_w = 106;
+cassette_d = 13.4;
 wall_thickness = 1;
 number_of_slots = 9;
 wall_height = 30;
