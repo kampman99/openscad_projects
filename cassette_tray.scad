@@ -9,7 +9,8 @@ cassette_d = 13.4;
 wall_thickness = 1;
 number_of_slots = 9;
 wall_height = 30;
-spaces = 30;
+spaces = 18;
+space_height = 6;
 space_spacing = cassette_w / spaces;
 
 total_length = wall_thickness + number_of_slots * (wall_thickness + cassette_d);
@@ -39,8 +40,8 @@ for (slot_num = [0:number_of_slots - 1]) {
             cube([cassette_w, wall_thickness, wall_height]);
             
             for (space_num = [0:spaces - 1]) {
-                translate([space_spacing * space_num + space_spacing / 4, -.5, wall_height * .1]) {
-                    cube([space_spacing / 2,wall_thickness + 1,wall_height * .8]);
+                translate([space_spacing * space_num + space_spacing / 4, -.5, (wall_height - space_height) / 2]) {
+                    cube([space_spacing / 2,wall_thickness + 1, space_height]);
                 }
             }
         }
@@ -56,8 +57,8 @@ translate([wall_thickness, number_of_slots * (cassette_d + wall_thickness), wall
     difference() {
         cube([cassette_w, wall_thickness, wall_height]);
         for (space_num = [0:spaces - 1]) {
-            translate([space_spacing * space_num + space_spacing / 4, -.5, wall_height * .1]) {
-                cube([space_spacing / 2,wall_thickness + 1,wall_height * .8]);
+            translate([space_spacing * space_num + space_spacing / 4, -.5, (wall_height - space_height) / 2]) {
+                cube([space_spacing / 2,wall_thickness + 1, space_height]);
             }
         }
     }
